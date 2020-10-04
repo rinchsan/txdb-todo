@@ -3,6 +3,7 @@ module github.com/rinchsan/txdb-todo
 go 1.15
 
 require (
+	github.com/DATA-DOG/go-txdb v0.1.3
 	github.com/caarlos0/env v3.5.0+incompatible
 	github.com/friendsofgo/errors v0.9.2
 	github.com/go-chi/chi v4.1.2+incompatible

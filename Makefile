@@ -14,6 +14,10 @@ upbuild:
 down:
 	cd etc/docker; docker-compose down
 
+.PHONY: test
+test:
+	cd etc/docker; docker-compose exec --env DB_DATABASE=db_test api go test ./... -v
+
 .PHONY: mysql
 mysql:
 	cd etc/docker; docker-compose exec mysql mysql -u${DB_USER} -p${DB_PASSWORD} ${DB_DATABASE}

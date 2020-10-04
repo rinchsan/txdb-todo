@@ -1,0 +1,14 @@
+- id: 1
+  username: John
+  created_at: 2020-12-29T23:59:59Z
+  updated_at: 2020-12-29T23:59:59Z
+
+- id: 2
+  username: Charles
+  created_at: 2020-12-29T23:59:59Z
+  updated_at: 2020-12-29T23:59:59Z
+
+- id: 3
+  username: Herbert
+  created_at: 2020-12-29T23:59:59Z
+  updated_at: 2020-12-29T23:59:59Z

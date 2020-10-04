@@ -1,0 +1,14 @@
+- todo_id: 1
+  user_id: 1
+
+- todo_id: 1
+  user_id: 2
+
+- todo_id: 2
+  user_id: 2
+
+- todo_id: 3
+  user_id: 2
+
+- todo_id: 3
+  user_id: 3
