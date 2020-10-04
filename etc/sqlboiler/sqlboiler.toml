@@ -1,0 +1,12 @@
+output = "pkg/entity"
+pkgname = "entity"
+wipe = true
+no-tests = true
+
+[mysql]
+dbname = "db"
+host = "localhost"
+port = 3306
+user = "todo"
+pass = "password"
+sslmode = "false"

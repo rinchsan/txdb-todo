@@ -1,0 +1,33 @@
+version: '3.5'
+
+services:
+
+  api:
+    container_name: todo-api
+    env_file: .env
+    build:
+      context: ../../
+      dockerfile: etc/docker/api/Dockerfile.dev
+    ports:
+      - 8080:8080
+    volumes:
+      - ../../:/go/src/github.com/rinchsan/txdb-todo:delegated
+    depends_on:
+      - mysql
+
+  mysql:
+    container_name: todo-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=db
+      - MYSQL_USER=todo
+      - MYSQL_PASSWORD=password
+    build: ./mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - todo-mysql:/var/lib/mysql
+      - ../db/ddl.sql:/var/tmp/ddl.sql
+
+volumes:
+  todo-mysql:

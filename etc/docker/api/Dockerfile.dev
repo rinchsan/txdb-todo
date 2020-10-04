@@ -1,0 +1,11 @@
+FROM golang:1.15-alpine3.12
+
+WORKDIR /go/src/github.com/rinchsan/txdb-todo
+
+RUN apk add --no-cache alpine-sdk git
+
+RUN go get -u github.com/cespare/reflex
+
+EXPOSE 8080
+
+CMD reflex -r '(\.go$|go\.mod)' -s go run ./cmd/api/
